@@ -16,7 +16,7 @@
 	 }
 	private function connect_to_server(){
 		if(!$this->link = mysql_connect($this->db_host,$this->db_user,$this->db_pass)){
-			$this->halt("can nat connect to the server : ".$this->db_host);
+			$this->halt("can not connect to the server : ".$this->db_host);
 		}
 		if(!mysql_select_db($this->db_name,$this->link)){
 			$this->halt("cat not found database name: ".$this->db_name);
